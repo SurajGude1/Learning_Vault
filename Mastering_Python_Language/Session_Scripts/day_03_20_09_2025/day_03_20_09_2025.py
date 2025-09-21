@@ -14,7 +14,7 @@
 # Python Variable Naming Rules
 
 # Must start with letter/underscore
-# name = "Suraj"    # valid
+# name = "John"    # valid
 # _name = 25        # valid
 
 # Cannot start with number or use symbols
@@ -23,17 +23,18 @@
 
 # Case-sensitive & no keywords
 # Age = 20   # valid (different from 'age')
+# age = 10
 # class = 5  # invalid (keyword)
 
-# ----------------------------------------------------------------------------------------
+# ------------------------------------------------------
 
 # Example 1: Assigning values to variables
-# name = "John"        # String variable
+# name =  "John"          # String variable
 # age = 25              # Integer variable
 # pi = 3.1415           # Float variable
 # is_active = True      # Boolean variable
 
-# print(name)   # Output: Suraj
+# print(name)   # Output: John
 # print(age)    # Output: 25
 # print(pi)     # Output: 3.1415
 # print(is_active)  # Output: True
@@ -49,6 +50,9 @@
 
 # Example 3: Multiple assignments
 # a, b, c = 1, 2, 3
+# a = 1
+# b = 2
+# c = 3
 # print(a, b, c)  # Output: 1 2 3
 
 # Example 4: Same value to multiple variables
@@ -100,7 +104,6 @@
 # print(z1, type(z1))   # Output: (2+3j) <class 'complex'>
 # print(z2, type(z2))   # Output: -5j <class 'complex'>
 
-
 # --------------------------------------
 # 4. String (str)
 # --------------------------------------
@@ -110,9 +113,11 @@
 # s1 = "Hello Python"
 # s2 = '''Multiline
 # String Example'''
+# s3 = """This line 1
+# This is line 2"""
 # print(s1, type(s1))   # Output: Hello Python <class 'str'>
 # print(s2, type(s2))   # Output: Multiline String Example <class 'str'>
-
+# print(s3, type(s3))
 
 # --------------------------------------
 # 5. Boolean (bool)
@@ -212,11 +217,13 @@
 
 # int → float
 # a = 5
+# print(a, type(a))
 # b = float(a)
 # print(b, type(b))   # Output: 5.0 <class 'float'>
 
 # float → int
 # pi = 3.99
+# print(pi, type(pi))
 # num = int(pi)
 # print(num, type(num))   # Output: 3 <class 'int'>
 
@@ -226,9 +233,10 @@
 # print(s, type(s))   # Output: "100" <class 'str'>
 
 # string → int
-# st = "25"
+# st = "55"
 # val = int(st)
-# print(val + 5)      # Output: 30
+# print(type(val))
+# print(val + int("5"))     
 
 # int → complex
 # c = complex(7)
@@ -257,16 +265,18 @@
 # print(s2)   # Output: Python
 # print(s3)   # Output: multi-line text
 
-
 # --------------------------------------
 # String Indexing & Slicing
 # --------------------------------------
-# text = "Learning"
+text = "Learning"
+# 01234567
+# -1-2-3-4-5-6-7-8
 # print(text[0])      # Output: L   (first character)
 # print(text[-1])     # Output: g   (last character)
-# print(text[0:4])    # Output: Lear (slice from index 0 to 3)
+# print(text[0:5])    # Output: Lear (slice from index 0 to 3)
+# print(text[1:4])
 # print(text[2:])     # Output: arning
-
+# print(text[-5:-1])
 
 # --------------------------------------
 # String Operations
@@ -279,7 +289,8 @@
 # --------------------------------------
 # Useful String Methods
 # --------------------------------------
-# msg = " hello world "
+# msg = " hello world I am here to teach you a python "
+# print(msg)
 # print(msg.upper())      # HELLO WORLD
 # print(msg.lower())      # hello world
 # print(msg.strip())      # removes spaces → "hello world"
@@ -313,7 +324,7 @@
 # --------------------------------------
 # Examples
 # --------------------------------------
-# text = "   hello python world   "
+text = "   hello python world   "
 
 # print(text.upper())       # HELLO PYTHON WORLD
 # print(text.lower())       # hello python world
@@ -329,8 +340,9 @@
 # print(" ".join(words))    # "Python is fun"
 
 # print(text.find("python"))  # 9
-# print(text.count("o"))      # 2
-# print(text.startswith("   h"))  # True
+# print(text.find("o"))
+# print(text.count("o"))      # 3
+# print(text.startswith("h"))  # False
 # print(text.endswith("ld   "))   # True
 
 
@@ -370,6 +382,7 @@
 # In Python, 0 → False, non-zero → True
 
 # print(bool(0))     # False
+# print(bool(1))
 # print(bool(5))     # True
 # print(bool(-10))   # True
 
@@ -387,10 +400,36 @@
 # Logical Operators with Booleans
 # --------------------------------------
 # print(True and False)   # False
+# print(True and True)
 # print(True or False)    # True
 # print(not True)         # False
-  
+
+# a = 10
+# b = 1.5
+# sum = a+b
+# print(int(sum)) 
 
 # ----------------------------------------------------------------------------------------------------------------------------
-# ----------------------------------------------------------------------------------------------------------------------------
+
+
+# ======================================
+# Practice Questions: Variables & Data Types
+# ======================================
+
+# Q1. Create variables to store your name, age, height (in float), 
+#     and whether you are a student (Boolean). Print each with type.
+
+# Q2. Convert the float number 12.75 into int and string. 
+#     Print results with their types.
+
+# Q3. Write a Python program that takes the string 
+#     " learning python is fun " 
+#     and apply strip(), capitalize(), replace("fun", "awesome").
+
+# Q4. Store two integers and perform addition, division, and modulus.
+#     Print the results along with their data types.
+
+# Q5. Create a complex number (3+4j). Print its real and imaginary parts.
+#     Then check if bool(0), bool(""), bool("Python") return True/False.
+
 # ----------------------------------------------------------------------------------------------------------------------------
