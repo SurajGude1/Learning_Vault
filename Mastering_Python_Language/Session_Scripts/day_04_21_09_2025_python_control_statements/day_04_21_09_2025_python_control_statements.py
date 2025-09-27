@@ -6,7 +6,6 @@
 # 3.1 Python If-Else
 # ======================================
 
-
 # 1. if-else is used to execute code based on conditions.
 # 2. The condition must evaluate to True or False.
 # 3. elif allows multiple conditions to be checked sequentially.
@@ -21,19 +20,23 @@
 #     print("Not eligible")
 
 # Example 2: If-Elif-Else
-# marks = 75
+# marks = 101
 # if marks >= 90:
 #     print("Grade: A")
 # elif marks >= 60:
 #     print("Grade: B")
-# else:
+# elif marks >= 50:
 #     print("Grade: C")
+# else:
+#     print("Invalid entry")
 
 # Example 3: Nested If
-# num = -5
+# num = 1
 # if num >= 0:
 #     if num == 0:
 #         print("Zero")
+#     elif num == 1:
+#         print("One")        
 #     else:
 #         print("Positive")
 # else:
@@ -46,7 +49,7 @@
 #     print("Eligible for promotion")
 # else:
 #     print("Not eligible")
-
+ 
 # Invalid Scenarios
 # if without colon → SyntaxError
 # if age >= 18
@@ -61,7 +64,6 @@
 
 
 # ---------------------------------------------------------------------------------------------
-
 
 # ======================================
 # 3.2 Python Loops 
@@ -95,14 +97,17 @@
 
 # Example 1: Using range(stop)
 # for i in range(5):  # 0 to 4
-#     print(i)
+#     print(i)   
 
 # Example 2: Using range(start, stop)
 # for i in range(2, 6):  # 2 to 5
 #     print(i)
 
 # Example 3: Using range(start, stop, step)
-# for i in range(1, 10, 2):  # Odd numbers from 1 to 9
+# for i in range(1, 10, 4):  # Odd numbers from 1 to 9
+#     print(i)
+
+# for i in range(5, 0, -1):
 #     print(i)
 
 # Example 4: Nested For Loops
@@ -112,9 +117,11 @@
 
 # Example 5: Comparing Two Strings Character by Character
 # str1 = "Python"
-# str2 = "Pythin"
+# str2 = "Python"
 
-# # Both should be of same length for index-based comparison
+# print(len(str1), len(str2))
+
+# # # Both should be of same length for index-based comparison
 # if len(str1) == len(str2):
 #     for i in range(len(str1)):
 #         if str1[i] == str2[i]:
@@ -129,7 +136,7 @@
 #     print(x)
 
 # Incorrect use of range
-# for i in range():  # TypeError: range expected at least 1 argument
+# for i in range(1):  # TypeError: range expected at least 1 argument
 #     print(i)
 
 
@@ -157,7 +164,7 @@
 #     num += 1
 
 # Example 2: Printing Even Numbers up to 10
-# n = 2
+# n = 1
 # while n <= 10:
 #     print(n)
 #     n += 2
@@ -175,6 +182,13 @@
 # while i >= 0:
 #     print(text[i])
 #     i -= 1
+
+# text = "Hello"
+# length = len(text) - 1
+# i = 0
+# while i <= length:
+#     print(text[i])
+#     i += 1    
 
 # Invalid Example 1: Infinite Loop
 # count = 1
@@ -211,6 +225,7 @@
 #     if i % 2 != 0:
 #         continue
 #     print(i)
+
 
 # Example 3: Skip vowels in a string
 # text = "Python"
@@ -254,7 +269,7 @@
 # 4. Works in both for and while loops.
 
 # Example 1: Stop loop at number 4
-# for i in range(1, 6):
+# for i in range(1, 100):
 #     if i == 4:
 #         break
 #     print(i)
@@ -298,6 +313,7 @@
 # ---------------------------------------------------------------------------------------------
 
 
+
 # ======================================
 # 3.7 Python Pass
 # ======================================
@@ -319,7 +335,7 @@
 #     pass   # function not implemented yet
 
 # Example 3: Empty conditional block
-# x = 10
+# x = 7
 # if x > 5:
 #     pass   # nothing happens if condition is true
 # else:
@@ -335,7 +351,7 @@
 #         if i == j:
 #             pass   # skip this iteration, do nothing
 #         else:
-#             print(i, j)
+#             print("This is i: ", i, " " + "This is j: ", j)
 
 
 # ---------------------------------------------------------------------------------------------
